@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 app.use(express.json()); // Sử dụng middleware để phân tích cú pháp dữ liệu JSON
-
+app.get("/", (req, res) => res.send("Express on Vercel"));
 app.post('/webhook', (req, res) => {
   // Kiểm tra xem có nhận được POST request từ bên thứ ba không
   if (req.body) {
