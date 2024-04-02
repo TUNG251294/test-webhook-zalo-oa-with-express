@@ -1,9 +1,12 @@
+const path = require('path');
+
 const express = require("express");
 const app = express();
 
 app.use(express.json()); // Sử dụng middleware để phân tích cú pháp dữ liệu JSON
 // Đặt công cụ template engine là EJS
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
 app.get("/", (req, res) => {
   res.render("index"); // Render tệp HTML sử dụng EJS
