@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 
 app.use(express.json()); // Sử dụng middleware để phân tích cú pháp dữ liệu JSON
-app.get("/", (req, res) => res.send("Express on Vercel"));
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html"); // Gửi tệp HTML cho khách hàng
+});
 app.post('/test-webhook-zalo-oa-with-express.vercel.app/', (req, res) => {
   // Kiểm tra xem có nhận được POST request từ bên thứ ba không
   if (req.body) {

@@ -10,13 +10,5 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2"
-  },
-  "head": {
-    "meta": [
-      {
-        "name": "zalo-platform-site-verification",
-        "content": "P_QY0A3J2WDgfOS7aOOl0MM4j5Y9ycS7CpSn"
-      }
-    ]
   }
 }
