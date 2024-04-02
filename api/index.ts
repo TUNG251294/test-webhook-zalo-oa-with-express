@@ -2,8 +2,11 @@ const express = require("express");
 const app = express();
 
 app.use(express.json()); // Sử dụng middleware để phân tích cú pháp dữ liệu JSON
+// Đặt công cụ template engine là EJS
+app.set("view engine", "ejs");
+
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html"); // Gửi tệp HTML cho khách hàng
+  res.render("index"); // Render tệp HTML sử dụng EJS
 });
 app.post('/test-webhook-zalo-oa-with-express.vercel.app/', (req, res) => {
   // Kiểm tra xem có nhận được POST request từ bên thứ ba không
